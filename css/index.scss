@@ -309,7 +309,7 @@
           font-weight: bold;
           height: 5%;
           line-height: 1.9em;
-          text-shadow: 2px 2px #fff;
+          text-shadow: 0px 0px 10px #f00 ;
           font-size: 15px;
           display: none;
           &.on {
@@ -523,13 +523,15 @@
       top: 43.5%;
       right: 20.4%;
       text-align: right;
+      
       ul {
         li {
-        opacity: 0;
-        margin: 17px 0;
-        font-size: 14px;
-        font-weight: bold;
-        text-shadow: 3px 3px 5px #fff;
+          opacity: 0;
+          margin: 17px 0;
+          font-size: 14px;
+          font-weight: bold;
+          text-shadow: 0px 0px 2px yellow;
+        // text-shadow: 3px 3px 5px #fff;
         &.on {
           opacity: 1;
         }
