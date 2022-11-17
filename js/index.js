@@ -2,25 +2,19 @@ $(window).on('load', function(){
   $('.eventbtn .close').selected()
 })
 
-$('#header .nav .menu .nav-menu .depth1').on('mouseover', function(){
-  $('#header .header-depth2').css({display: 'block'})
-}) 
-$('#header .depth1').on('mouseleave', function(){
-  $('#header .header-depth2').css({display: 'none'})
-}) 
-
 // $('.slider').slick();
 
 $('.slider').slick({
   dots: true,
   infinite: true,
   speed: 500,
-  fade: true,
+  fade: false,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
-  cssEase: 'linear'
+  cssEase: 'linear',
+  vertical: true
 });
 
 $('.slick-dots >li').on('mouseover', function(){
@@ -34,20 +28,6 @@ $('.slick-dots >li').on('mouseout', function(){
 
 })
 
-$('.footerslide').slick({
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 5000,
-  cssEase: 'linear',
-  prevArrow:'<button class="arrleft"><i class="fa-solid fa-angle-left"></i></button>',
-  nextArrow:'<button class="arrright"><i class="fas fa-angle-right"></i></button>'
-});
-
 $('.eventbar-depth2').css({opacity:0}).slideUp()
 $('.eventbtn .open').on('click', function(){
   $('.eventbar-depth2').css({opacity:1}).slideDown("slow")
@@ -56,3 +36,27 @@ $('.eventbtn .close').on('click', function(){
   $('.eventbar-depth2').slideUp("slow")
 })
 
+$('#popup .popup-top .p-top-right .controls li.minimize').on('click', function(){
+  if($('#popup').hasClass('off')){
+    $('#popup').removeClass('off')
+    $('#popup .popup-bottom .textbox').removeClass('toggle')
+  } else {
+    $('#popup').addClass('off').removeClass('full')
+    $('#popup .popup-bottom .textbox').addClass('toggle')
+
+  }
+})
+
+$('#popup .popup-top .p-top-right .controls li.maximize').on('click', function(){
+  $('#popup').addClass('full').removeClass('off')
+  $(this).css({display:'none'}).siblings('.restore').css({display: 'block'})
+  $('#popup .popup-bottom .textbox').removeClass('toggle')
+})
+$('#popup .popup-top .p-top-right .controls li.restore').on('click', function(){
+  $('#popup').removeClass('full')
+  $(this).css({display:'none'}).siblings('.maximize').css({display: 'block'})
+})
+
+$('#popup .popup-top .p-top-right .controls li.close').on('click', function(){
+  $('#popup').css({display: 'none'}).removeClass('off full')
+})
