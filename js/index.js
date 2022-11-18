@@ -1,6 +1,9 @@
 $(window).on('load', function(){
   $('.eventbtn .close').selected()
 })
+// $(body).on('click', '.eventbtn .close', function(){
+//   $('.eventbar-depth2').slideUp()
+// })
 
 // $('.slider').slick();
 

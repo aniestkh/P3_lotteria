@@ -10,6 +10,18 @@ $('#header .depth1').on('mouseleave', function(){
 }) 
 
 
+$('.art1-side-slide').slick({
+  dots: false,
+  infinite: true,
+  speed: 500,
+  fade: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+  cssEase: 'linear',
+  prevArrow:'<button class="arrleft"><i class="fa-solid fa-caret-left"></i></button>',
+  nextArrow:'<button class="arrright"><i class="fa-solid fa-caret-right"></i></button>'
+});
 
 $('.footerslide').slick({
   dots: true,
