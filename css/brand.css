@@ -173,6 +173,7 @@
 }
 #header .menu .nav-menu .depth1 .depth2 > div ul li:hover {
   background-color: red;
+  color: #fff;
 }
 #header .menu .nav-menu .depth1 .depth2 > div ul li:hover .icon {
   opacity: 1;
